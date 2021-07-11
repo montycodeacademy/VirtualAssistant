@@ -149,6 +149,8 @@ class VoiceAssistApp(MDApp):
             elif len(data['RelatedTopics']):
                 field = data['RelatedTopics'][0]
                 responseText = field["Text"]
+
+            responseText = responseText[0:responseText.find('.')]
             self.record_text_and_respond(text, responseText)
 
     def text_update(self):
