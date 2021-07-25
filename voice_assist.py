@@ -142,7 +142,7 @@ class VoiceAssistApp(MDApp):
                          })
 
             data = response.json()
-            responseText = "I do not have an Answer for that"
+            responseText = "I do not have an Answer for that."
             print(data)
             if len(data['AbstractText']):
                 responseText = data['AbstractText']
